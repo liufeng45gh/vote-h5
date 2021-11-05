@@ -1,0 +1,3 @@
+export const MODULEA = {
+  CHANGE_TITLE: 'MODULEA.CHANGE_TITLE'
+}
