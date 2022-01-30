@@ -66,7 +66,7 @@
 <script lang="ts">
 import {  defineComponent, ref,onMounted, reactive } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { getCategory,getAppreciateListByCategoryId,getVoteCount} from   '@/apis/moduleA';
+import { getCategory,getAppreciateListByCategoryId,getVoteCount,voteSubmit,openWxLogin} from   '@/apis/moduleA';
 
 export default defineComponent({
   name: 'appreciateList',
@@ -90,9 +90,28 @@ export default defineComponent({
         }
         return  "card-item card-right";;
       };
-    const doVote = (id) =>{
-        console.log(id);
+
+    const doVote = (id: any) =>{
+         console.log(id);
+        const data_send =  reactive({
+            appreciateId : id,
+            random: Math.random
+        });
+       
+        voteSubmit(data_send).then(res => {
+        //debugger
+        //suppliers.value = res.data
+        //pageState.voteCount = res.data;
+        console.log(res.data)
+        }).catch(error => {
+             console.log(error)
+             if (error.status == 401) {
+                openWxLogin();
+             }
+        });
     }
+
+
 
     onMounted(() => {
       getCategory(categoryId).then(res => {
