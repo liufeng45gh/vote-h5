@@ -46,6 +46,7 @@
 <script lang="ts">
 import {  defineComponent, ref,onMounted } from 'vue';
 import { getCategorys} from   '@/apis/moduleA';
+import { wxShare} from   '@/apis/wxapi';
 
 export default defineComponent({
   name: 'category',
@@ -66,6 +67,7 @@ export default defineComponent({
     
       
       })
+      wxShare()
     })
     return {
         categorys

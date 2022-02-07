@@ -17,7 +17,7 @@ export function configWX(data){
     }
 
     wx.config({
-        debug: false,
+        debug: true,
         appId: appid,
         timestamp: data.timestamp,
         nonceStr: data.nonceStr,
@@ -66,7 +66,10 @@ export function configWX(data){
 }
 
 export function wxShare(): any {
-    getWxConfig().then(res => {
+ 
+      const lineLink = location.href.split('#')[0];
+  
+    getWxConfig(lineLink).then(res => {
         console.log(res.data)
         configWX(res.data)
     })
