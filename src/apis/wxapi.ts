@@ -7,7 +7,7 @@ export function configWX(data){
     const shareContent = "快来投上宝贵的一票!";
     const shareTitle = "天然气销售分公司首届文创评选展示活动";
     const appid = "wx41dbe3ee3f386699";
-    const shareImgUrl = "https://vote.stack.xin/share-icon.jpg";
+    const shareImgUrl = "https://vote.stack.xin/web/icon/share-icon.jpg";
 
     let lineLink = window.location.href;
     if(lineLink.indexOf("?") != -1)
@@ -17,7 +17,7 @@ export function configWX(data){
     }
 
     wx.config({
-        debug: true,
+        debug: false,
         appId: appid,
         timestamp: data.timestamp,
         nonceStr: data.nonceStr,

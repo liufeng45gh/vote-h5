@@ -70,7 +70,8 @@ export function getVoteCount(): any {
 export function voteSubmit(data): any {
   return httpRequest({
     url: baseUrl[process.env.VUE_APP_NODE_ENV] + `/api/vote/submit` ,
-    method: 'post'
+    method: 'post',
+    data: data
   });
 }
 

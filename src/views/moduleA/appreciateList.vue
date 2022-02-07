@@ -11,9 +11,11 @@
     </div>
 
     <div class="left-total">
-       <a href="/appreciate/category">
+      
+       <router-link :to="{path: '/category'}" class="nav-link">
        <img src="https://vote.stack.xin/web/images/btn-bk.png" />
-       </a>
+        </router-link>
+      
     </div>
 
     <div style="clear: both;"></div>
@@ -67,6 +69,7 @@
 import {  defineComponent, ref,onMounted, reactive } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { getCategory,getAppreciateListByCategoryId,getVoteCount,voteSubmit,openWxLogin} from   '@/apis/moduleA';
+import { Toast } from 'vant';
 
 export default defineComponent({
   name: 'appreciateList',
@@ -107,6 +110,8 @@ export default defineComponent({
              console.log(error)
              if (error.status == 401) {
                 openWxLogin();
+             }else {
+                 Toast(error.data.message)
              }
         });
     }
