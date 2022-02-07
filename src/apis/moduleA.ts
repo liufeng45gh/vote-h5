@@ -77,3 +77,10 @@ export function voteSubmit(data): any {
 export function openWxLogin(): any {
   window.location.href = "https://vote.stack.xin/api/wx/login/"+process.env.VUE_APP_NODE_ENV+"?random="+Math.random();
 }
+
+export function getWxConfig(): any {
+  return httpRequest({
+    url: baseUrl[process.env.VUE_APP_NODE_ENV] + `/api/wx-config` ,
+    method: 'post'
+  });
+}

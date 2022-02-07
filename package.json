@@ -12,12 +12,11 @@
   "dependencies": {
     "axios": "^0.20.0-0",
     "lib-flexible": "^0.3.2",
-    "swiper": "^7.4.1",
     "vant": "^3.2.6",
     "vue": "^3.0.0",
-    "vue-awesome-swiper": "^4.1.1",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "vuex": "^4.0.0-0",
+    "weixin-js-sdk": "^1.6.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.18.0",
