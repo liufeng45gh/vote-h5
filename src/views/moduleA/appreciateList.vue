@@ -38,7 +38,8 @@
                     <div class="card-title"><span class="c-rosewood">{{appreciate.title}}</span></div>
                     <div class="card-img">
 
-                        <router-link to="{path: '/appreciate/detail', query: {id: appreciate.id }}" >
+                       
+                        <router-link :to="{path: '/appreciate/detail', query: {id: appreciate.id }}" class="nav-link">
                         <img :src="appreciate.logo">
                         </router-link>
                         <!--

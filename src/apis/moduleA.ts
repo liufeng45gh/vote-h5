@@ -86,3 +86,10 @@ export function getWxConfig(data): any {
     data: data
   });
 }
+
+export function getAppreciate(id): any {
+  return httpRequest({
+    url: baseUrl[process.env.VUE_APP_NODE_ENV] + `/api/appreciate/` +id,
+    method: 'get'
+  });
+}
