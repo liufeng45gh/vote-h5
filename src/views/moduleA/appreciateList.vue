@@ -7,7 +7,7 @@
     <div class="logo"><img src="http://osi1i0y6i.bkt.clouddn.com/logo.png"/></div>
     -->
     <div class="right-total">
-        <span> 票数: </span><span style="margin-left: 5px;" >{{pageState.voteCount}}</span>
+        <span> 票数: </span><span style="margin-left: 5px;" >{{pageState.totalVoteCount}}</span>
     </div>
 
     <div class="left-total">
@@ -85,7 +85,7 @@ export default defineComponent({
     const appreciateList: any = ref([]);
 
     const pageState : any = reactive({
-     voteCount : 0,
+     totalVoteCount : 0,
    });
 
     const getCardClass = (index :number) => {
@@ -107,6 +107,13 @@ export default defineComponent({
         //suppliers.value = res.data
         //pageState.voteCount = res.data;
         console.log(res.data)
+        appreciateList.forEach(item => {
+            if(item.id == id){
+                item.voteCount = item.voteCount +1
+            }
+        })
+        pageState.totalVoteCount = pageState.totalVoteCount + 1
+        Toast.success('投票成功');
         }).catch(error => {
              console.log(error)
              if (error.status == 401) {
@@ -135,7 +142,7 @@ export default defineComponent({
         getVoteCount().then(res => {
         //debugger
         //suppliers.value = res.data
-        pageState.voteCount = res.data;
+        pageState.totalVoteCount = res.data;
         console.log(res.data)
         })
     })

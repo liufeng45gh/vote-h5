@@ -26,7 +26,7 @@
 
 <div class="vote-content"  v-html="pageState.appreciate.content"></div>
 
-<div class="vote-bottom" objectId="{{pageState.appreciate.id}}"> <div class="vote-btn  detail-vote-btn">&nbsp;</div></div>
+<div class="vote-bottom" objectId="{{pageState.appreciate.id}}"> <div class="vote-btn  detail-vote-btn" @click="doVote(pageState.appreciate.id)">&nbsp;</div></div>
 </template>
 
 
@@ -65,6 +65,8 @@ export default defineComponent({
         //suppliers.value = res.data
         //pageState.voteCount = res.data;
         console.log(res.data)
+        pageState.appreciate.voteCount = pageState.appreciate.voteCount +1;
+        Toast.success('投票成功');
         }).catch(error => {
              console.log(error)
              if (error.status == 401) {
@@ -85,13 +87,6 @@ export default defineComponent({
         pageState.category = res.data.category;
         pageState.appreciate = res.data.appreciate;
         //console.log(res.data)
-        })
-   
-        getVoteCount().then(res => {
-        //debugger
-        //suppliers.value = res.data
-        pageState.voteCount = res.data;
-        console.log(res.data)
         })
     })
     return {
