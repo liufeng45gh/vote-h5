@@ -24,7 +24,7 @@
 
 <div class="vote-title">{{pageState.appreciate.title}}</div>
 
-<div class="vote-content">{{pageState.appreciate.content}}</div>
+<div class="vote-content"  v-html="pageState.appreciate.content"></div>
 
 <div class="vote-bottom" objectId="{{pageState.appreciate.id}}"> <div class="vote-btn  detail-vote-btn">&nbsp;</div></div>
 </template>
@@ -104,7 +104,7 @@ export default defineComponent({
 </script>
 
 
-<style scoped lang="css">
+<style  lang="css">
 body{
     margin: 0;
     background-color: #a11b0e;
@@ -293,9 +293,9 @@ body{
      overflow: hidden;
      text-align: center;
       color: white;
-     font-size: 2.9rem;
-     margin-top: 13rem;
-     padding: 0 3rem 0 3rem;
+     font-size: 0.6rem;
+     margin-top: 0.3rem;
+     padding: 0 0.3rem 0 0.3rem;
 }
 
 .vote-content{
@@ -305,13 +305,13 @@ body{
     clear: both;
 
     border: 0;
-    line-height: 54px;
+    line-height: 1.0rem;
 
     color: white;
-    font-size: 1.9rem;
-    margin-top: 2rem;
+    font-size: 0.5rem;
+    margin-top: 0.3rem;
     text-align: left;
-    padding: 0 2rem 0 2rem;
+    padding: 0 0.2rem 0 0.2rem;
 }
 
 .vote-content img{
