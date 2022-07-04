@@ -6,7 +6,7 @@ export function configWX(data){
 
     const shareContent = "快来投上宝贵的一票!";
     const shareTitle = "天然气销售分公司首届文创评选展示活动";
-    const appid = "wx41dbe3ee3f386699";
+    const appid = "wx1b792045969d2147";
     const shareImgUrl = "https://vote.klny.xyz/web/icon/share-icon.jpg";
 
     let lineLink = window.location.href;
