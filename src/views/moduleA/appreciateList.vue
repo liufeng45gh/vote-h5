@@ -13,7 +13,7 @@
     <div class="left-total">
       
        <router-link :to="{path: '/category'}" class="nav-link">
-       <img src="https://vote.stack.xin/web/images/btn-bk.png" />
+       <img src="https://vote.klny.xyz/web/images/btn-bk.png" />
         </router-link>
       
     </div>
@@ -326,7 +326,7 @@ body{
     background: 0;
     text-shadow: none;
     height: 1rem;
-    background-image: url(https://vote.stack.xin/web/images/btn-vote.png);
+    background-image: url(https://vote.klny.xyz/web/images/btn-vote.png);
     background-size:100%;
     background-repeat:no-repeat;
     border-radius: 10px;

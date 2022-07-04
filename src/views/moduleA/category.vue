@@ -36,7 +36,7 @@
 
     <div class="c-culture">
         <a href="https://www.cnpc.com.cn/cnpc/gyqywh/qywh_index.shtml">
-        <img class="see-culture" id="see-culture" src="https://vote.stack.xin/web/images/culture.png"/>
+        <img class="see-culture" id="see-culture" src="https://vote.klny.xyz/web/images/culture.png"/>
         </a>
     </div>
 
@@ -91,7 +91,7 @@ html,body,#app{
     height: 100%;
     padding-top: 3rem;
     margin: 0;
-    background-image: url(https://vote.stack.xin/web/images/bc.jpg);
+    background-image: url(https://vote.klny.xyz/web/images/bc.jpg);
     background-size: 100%;
     background-repeat:no-repeat;
     background-color: #a11b0e;

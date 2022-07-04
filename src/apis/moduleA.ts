@@ -76,7 +76,7 @@ export function voteSubmit(data): any {
 }
 
 export function openWxLogin(): any {
-  window.location.href = "https://vote.stack.xin/api/wx/login/"+process.env.VUE_APP_NODE_ENV+"?random="+Math.random();
+  window.location.href = "https://vote.klny.xyz/api/wx/login/"+process.env.VUE_APP_NODE_ENV+"?random="+Math.random();
 }
 
 export function getWxConfig(data): any {

@@ -16,7 +16,7 @@
         &nbsp;
     </div>
     <div class="rule-content">
-        <div class="btn-close" id="btn-rule-close" @click="closeRule()"><img src="https://vote.stack.xin/web/images/p2/close.png"/></div>
+        <div class="btn-close" id="btn-rule-close" @click="closeRule()"><img src="https://vote.klny.xyz/web/images/p2/close.png"/></div>
         <div class="text-1" >
             投票规则
         </div>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="text-qrcode" >
-            <img src="https://vote.stack.xin/web/images/p2/qrcode.png"/>
+            <img src="https://vote.klny.xyz/web/images/p2/qrcode.png"/>
         </div>
 
         <div class="text-2" >
