@@ -59,26 +59,23 @@ export default defineComponent({
 
 
     onMounted(() => {
-      getCategorys().then(res => {
-        //debugger
-        //suppliers.value = res.data
-        categorys.value = res.data;
-        console.log(res.data)
-      })
-      wxShare()
-
        checkLogin().then(res => {
             //debugger
-            //suppliers.value = res.data
-            //pageState.voteCount = res.data;
-            console.log(res.data)
-           
+            console.log(res.data)       
         }).catch(error => {
              console.log(error)
              if (error.status == 401) {
                 openWxLogin();
              }
         });
+
+        getCategorys().then(res => {
+            //debugger
+            //suppliers.value = res.data
+            categorys.value = res.data;
+            console.log(res.data)
+        })
+        wxShare()
     })
     return {
         categorys
