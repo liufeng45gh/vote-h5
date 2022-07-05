@@ -45,7 +45,7 @@
 </template>
 <script lang="ts">
 import {  defineComponent, ref,onMounted } from 'vue';
-import { getCategorys} from   '@/apis/moduleA';
+import { getCategorys,checkLogin,openWxLogin} from   '@/apis/moduleA';
 import { wxShare} from   '@/apis/wxapi';
 
 export default defineComponent({
@@ -64,10 +64,21 @@ export default defineComponent({
         //suppliers.value = res.data
         categorys.value = res.data;
         console.log(res.data)
-    
-      
       })
       wxShare()
+
+       checkLogin().then(res => {
+            //debugger
+            //suppliers.value = res.data
+            //pageState.voteCount = res.data;
+            console.log(res.data)
+           
+        }).catch(error => {
+             console.log(error)
+             if (error.status == 401) {
+                openWxLogin();
+             }
+        });
     })
     return {
         categorys

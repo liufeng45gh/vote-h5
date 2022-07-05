@@ -93,3 +93,11 @@ export function getAppreciate(id): any {
     method: 'get'
   });
 }
+
+export function checkLogin(): any {
+  return httpRequest({
+    url: baseUrl[process.env.VUE_APP_NODE_ENV] + `/api/wx/check-login` ,
+    method: 'post',
+    data: {}
+  });
+}
