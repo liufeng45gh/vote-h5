@@ -103,17 +103,19 @@ export default defineComponent({
         });
        
         voteSubmit(data_send).then(res => {
-        //debugger
-        //suppliers.value = res.data
-        //pageState.voteCount = res.data;
-        console.log(res.data)
-        appreciateList.forEach(item => {
-            if(item.id == id){
-                item.voteCount = item.voteCount +1
-            }
-        })
-        pageState.totalVoteCount = pageState.totalVoteCount + 1
-        Toast.success('投票成功');
+            debugger
+            //suppliers.value = res.data
+            //pageState.voteCount = res.data;
+            console.log(res.data)
+            appreciateList.value.forEach(item => {
+                console.log(item)
+                console.log(id)
+                if(item.id == id){
+                    item.voteCount = item.voteCount +1
+                }
+            })
+            pageState.totalVoteCount = pageState.totalVoteCount + 1
+            Toast.success('投票成功');
         }).catch(error => {
              console.log(error)
              if (error.status == 401) {

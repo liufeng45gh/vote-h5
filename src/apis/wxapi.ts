@@ -4,12 +4,13 @@ import {getWxConfig} from   '@/apis/moduleA';
 
 export function configWX(data){
 
-    const shareContent = "快来投上宝贵的一票!";
-    const shareTitle = "喜迎二十大 一起向未来 西南油气田公司2022年职工第九套广播体操比赛";
+    const shareContent = "快来投票吧~";
+    const shareTitle = '“喜迎二十大 一起向未来”西南油气田公司2022年职工第九套广播体操比赛“最佳人气奖”投票开始啦';
     const appid = "wx1b792045969d2147";
     const shareImgUrl = "https://vote.klny.xyz/web/icon/share-icon.jpg";
 
-    let lineLink = window.location.href;
+    let lineLink = "https://vote.klny.xyz/"
+    //window.location.href;
     if(lineLink.indexOf("?") != -1)
     {
         lineLink = lineLink.split("?")[0];
