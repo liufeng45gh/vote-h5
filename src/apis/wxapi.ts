@@ -5,7 +5,7 @@ import {getWxConfig} from   '@/apis/moduleA';
 export function configWX(data){
 
     const shareContent = "快来投上宝贵的一票!";
-    const shareTitle = "天然气销售分公司首届文创评选展示活动";
+    const shareTitle = "喜迎二十大 一起向未来 西南油气田公司2022年职工第九套广播体操比赛";
     const appid = "wx1b792045969d2147";
     const shareImgUrl = "https://vote.klny.xyz/web/icon/share-icon.jpg";
 
