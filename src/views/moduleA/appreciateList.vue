@@ -35,7 +35,7 @@
     <div class="w-max m-bg">
             <div  v-for="(appreciate ,index) in appreciateList" :class="getCardClass(index)" :objectId="appreciate.id">
                 <div class="card-border">
-                    <div class="card-title"><span class="c-rosewood">{{appreciate.title}}</span></div>
+                    <div class="card-title"><span class="c-rosewood">{{appreciate.top}} {{appreciate.title}}</span></div>
                     <div class="card-img">
 
                        
@@ -48,10 +48,10 @@
                     </div>
 
                     <div class="vote-count">
-                        <span class="c-rosewood">票数</span>
+                        
                         <span class="c-rosewood show-count">{{appreciate.voteCount}}</span>
-
-                        <span class="c-red s-right">{{appreciate.top}} 号</span>
+                        <span class="c-rosewood">票</span>
+                       
                     </div>
 
 
@@ -173,7 +173,7 @@ body{
 }
 
 .top-bg{
-    background-image: url(http://osi1i0y6i.bkt.clouddn.com/bg_top.jpg);
+    background-image: url(https://vote.klny.xyz/bg_top.png);
     background-size:100% 100%;
     background-repeat:no-repeat;
     height: 1.3rem;

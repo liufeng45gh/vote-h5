@@ -4,7 +4,9 @@
  
     <img class="img-bg-1" :src="resources['/web/images/p1/bg-1.jpg']"/>
 
-    <img class="title-1" :src="resources['/web/images/p1/box.png']"/>
+    <img class="a-4" :src="resources['/web/images/p1/a-4.png']"/>
+
+    <img class="title-1" :src="resources['/web/images/p1/box.gif']"/>
 
     <div class="process-text">{{state.processCurrent}}%</div>
 
@@ -120,11 +122,18 @@ export default defineComponent({
     left: 0px;
 }
 
-.title-1{
-    width: 30%;
+.a-4{
+    width: 70%;
     position: absolute;
-    left: 35%;
-    top: 30rem;
+    left: 15%;
+    top: 4rem;
+}
+
+.title-1{
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    top: 5rem;
 }
 
 .process-text{

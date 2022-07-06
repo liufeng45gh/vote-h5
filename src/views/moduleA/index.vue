@@ -6,10 +6,7 @@
         <locadingStart @loadComplated="loadComplated">
         </locadingStart>
       </van-swipe-item>
-      <van-swipe-item>
-        <locadingSuccess>
-        </locadingSuccess>
-      </van-swipe-item>
+     
  
     </van-swipe>
 
@@ -22,6 +19,7 @@ import { Overlay, Button } from 'vant';
 import locadingStart from '@/views/moduleA/loadingStart.vue';
 import locadingSuccess from '@/views/moduleA/loadSuccess.vue';
 import { Swipe, SwipeItem } from 'vant';
+import router from '@/router';
 
 
 
@@ -44,7 +42,8 @@ export default defineComponent({
     }
 
     const loadComplated =()=>{
-      swiper.value.swipeTo(1);
+      //swiper.value.swipeTo(1);
+      router.push(`/category`)
     }
 
     return {
