@@ -173,11 +173,11 @@ body{
 }
 
 .top-bg{
-    background-image: url(https://vote.klny.xyz/bg_top.png);
+    background-image: url(https://vote.klny.xyz/web/images/p3/bg.jpg);
     background-size:100% 100%;
     background-repeat:no-repeat;
     height: 1.3rem;
-    background-color: #831b10;
+    background-color: #e39919;
 }
 
 .logo{
@@ -218,12 +218,12 @@ body{
 }
 
 .t-bg{
-     background-color: #831b10;
+     background-color: #e39919;
      opacity: 0.8;
 }
 
 .m-bg{
-    background-color: #a11b0e;
+    background-color: #e39919;
     padding-bottom: 3rem;
     padding-top: 0.1rem;
 }
