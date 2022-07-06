@@ -91,17 +91,21 @@ export default defineComponent({
        state.showRule = true;
    }
 
-    onMounted(() => {
-    //    checkLogin().then(res => {
-    //         //debugger
-    //         console.log(res.data)       
-    //     }).catch(error => {
-    //          console.log(error)
-    //          if (error.status == 401) {
-    //             openWxLogin();
-    //          }
-    //     });
+    const doCheckLogin = () =>{
+       checkLogin().then(res => {
+            //debugger
+            console.log(res.data)       
+        }).catch(error => {
+             console.log(error)
+             if (error.status == 401) {
+                openWxLogin();
+             }
+        });
+   }
 
+    onMounted(() => {
+       
+        doCheckLogin();
         getCategorys().then(res => {
             //debugger
             //suppliers.value = res.data
