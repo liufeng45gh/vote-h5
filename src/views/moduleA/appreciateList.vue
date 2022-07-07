@@ -161,8 +161,9 @@ export default defineComponent({
 </script>
 <style scoped lang="css">
 body{
+    background-image: url(https://vote.klny.xyz/web/images/p3/bg.jpg);
     margin: 0;
-    background-color: #a11b0e;
+    background-color: #f58b34;
 }
 .wrap{
 
@@ -173,11 +174,11 @@ body{
 }
 
 .top-bg{
-    background-image: url(https://vote.klny.xyz/web/images/p3/bg.jpg);
+    
     background-size:100% 100%;
     background-repeat:no-repeat;
     height: 1.3rem;
-    background-color: #e39919;
+    background-color: #c05a22;
 }
 
 .logo{
@@ -218,12 +219,12 @@ body{
 }
 
 .t-bg{
-     background-color: #e39919;
+     background-color: #c05a22;
      opacity: 0.8;
 }
 
 .m-bg{
-    background-color: #e39919;
+    background-color: #f58b34;
     padding-bottom: 3rem;
     padding-top: 0.1rem;
 }

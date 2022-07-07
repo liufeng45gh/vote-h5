@@ -1,27 +1,5 @@
 <template>
-    <div class=" top-bg">
-    <!--
-    <div class="logo"><img src="/web/images/logo.png"/></div>
-    <div class="right-total">
-        <span style="color: white;"> 总投票数: </span><span style="color: #FFFF00;margin-left: 5px;">${allVoteCount?default(0)}</span>
-    </div>
-    <div class="left-total">
-        <span style="color: white;"> 总作品数:</span><span style="color: #FFFF00;margin-left: 10px;">${allAppreciateCount?default(0)}</span>
-    </div>
-    -->
-    <div style="clear: both;"></div>
-      <!--
-    <div class="vote-tips">
-
-        <span style="font-size: 28px;"> 温馨提示:</span><span style="font-size: 25px;">每类作品均需投票（可多选），每个作品每人每天只能投一票。</span>
-
-        <span style="font-size: 28px;"> 温馨提示:</span><span style="font-size: 25px;">投票已经结束，谢谢您的参与</span>
-
-    </div>
-    -->
-
-</div>
-
+    
 <div class="w-max ">
 
     <div class="w-box ">
@@ -139,7 +117,7 @@ html,body,#app{
     background-image: url(https://vote.klny.xyz/web/images/p2/bg-2.jpg);
     background-size: 100%;
     background-repeat:no-repeat;
-    background-color: #a11b0e;
+    background-color: #f58b34;
 }
 
 .w-box {

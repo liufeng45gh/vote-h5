@@ -102,7 +102,7 @@ export default defineComponent({
 <style  lang="css">
 body{
     margin: 0;
-    background-color: #a11b0e;
+    background-color: #f58b34;
 }
 .wrap{
 
@@ -117,7 +117,7 @@ body{
     background-size:100% 100%;
     background-repeat:no-repeat;
     height: 1.3rem;
-    background-color: #831b10;
+    background-color: #c05a22;
 }
 
 .logo{
@@ -158,7 +158,7 @@ body{
 }
 
 .t-bg{
-     background-color: #831b10;
+     background-color: #c05a22;
      opacity: 0.8;
 }
 
