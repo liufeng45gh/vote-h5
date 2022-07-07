@@ -3,6 +3,10 @@
 <div class="w-max ">
 
     <div class="w-box ">
+
+         <div class="c-title" >  
+                <img class="see-title" src="https://vote.klny.xyz/web/images/p2/b-t.png" @click="openTitle()"/>
+        </div>
         <div class="c-item" v-for="category in categorys">
             <div class="c-img">
                 <router-link :to="{path: '/appreciate/by-category', query: {categoryId: category.id }}" class="nav-link">
@@ -16,6 +20,11 @@
     <div class="c-culture">
         <img class="see-rule" id="see-rule" src="https://vote.klny.xyz/web/images/p2/see-rule.png" @click="openRule()"/>
         
+    </div>
+
+     <div class="b-text">
+        <div>西南油气田公司工会、体协主办  </div>
+        <div>“川油人”微信公众号技术支持</div>    
     </div>
 
     <div style="clear: both;"></div>
@@ -39,6 +48,35 @@
             </div>
         </div>
     </div>
+
+    <div class="rule-area" v-show="state.showTitle">
+        <div class="rule-bg">
+            &nbsp;
+        </div>
+        <div class="rule-content-2">
+            <div class="btn-close" id="btn-rule-close" @click="closeTitle()"><img src="https://vote.klny.xyz/web/images/p2/close.png"/></div>
+            <div class="text-1" >
+                比赛内容
+            </div>
+            <div class="text-2" >
+                比赛内容为中华人民共和国第九套广播体操，设混合团体组、混合创编组两个比赛组别。
+            </div>
+
+        
+            <div class="text-2" >
+                混合团体组：统一完成第九套广播体操整套标准动作，并使用标准音乐。
+            </div>
+
+            <div class="text-2" >
+               混合创编组：第九套广播体操每一节动作至少完成2个8拍，中间环节可进行创编，创编部分鼓励加入健美操、健排舞、街舞或其它体育项目元素，音乐可根据创编内容自行剪辑。
+            </div>
+            
+            <div class="text-2" >
+                &nbsp;
+            </div>
+    </div>
+</div>
+
 </div>
 </template>
 <script lang="ts">
@@ -56,8 +94,7 @@ export default defineComponent({
    
     const state: any = reactive({
         showRule : false,
-        processCurrent: 0,
-        increaseQuantity: 10
+        showTitle: false,
     });
 
      const closeRule = () =>{
@@ -67,6 +104,14 @@ export default defineComponent({
 
      const openRule = () =>{
        state.showRule = true;
+   }
+
+     const closeTitle = () =>{
+       console.log("closeRule");
+       state.showTitle = false;
+   }
+     const openTitle = () =>{
+       state.showTitle = true;
    }
 
     const doCheckLogin = () =>{
@@ -83,7 +128,7 @@ export default defineComponent({
 
     onMounted(() => {
        
-        doCheckLogin();
+        //doCheckLogin();
         getCategorys().then(res => {
             //debugger
             //suppliers.value = res.data
@@ -93,7 +138,7 @@ export default defineComponent({
         wxShare()
     })
     return {
-        categorys,state,closeRule,openRule
+        categorys,state,closeRule,openRule,openTitle,closeTitle
     };
   }
 });
@@ -117,7 +162,7 @@ html,body,#app{
     background-image: url(https://vote.klny.xyz/web/images/p2/bg-2.jpg);
     background-size: 100%;
     background-repeat:no-repeat;
-    background-color: #f58b34;
+    background-color: #d31114;
 }
 
 .w-box {
@@ -129,6 +174,18 @@ html,body,#app{
     background-image: url(https://vote.klny.xyz/web/images/p2/b-1.png);
     background-size: 100%;
     background-repeat:no-repeat;
+}
+
+.c-title{
+    width: 100%;
+    text-align: center;
+}
+
+.see-title{
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    top: 10.9rem;
 }
 
 .c-culture{
@@ -158,6 +215,14 @@ html,body,#app{
     bottom: 1rem;
 }
 
+.b-text{
+  width: 100%;
+  color: #ffb422;
+  font-size: 0.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .rule-bg{
     width: 100%;
     height: 100%;
@@ -170,6 +235,17 @@ html,body,#app{
 .rule-content{
     width: 90%;
     top: 8rem;
+    position: absolute;
+    background-color: white;
+    border-color: #ffaf8f;
+    border:3px solid #ffaf8f;
+    border-radius:15px ;
+    left: 4%;
+}
+
+.rule-content-2{
+    width: 90%;
+    top: 7rem;
     position: absolute;
     background-color: white;
     border-color: #ffaf8f;

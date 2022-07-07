@@ -102,7 +102,7 @@ export default defineComponent({
 <style  lang="css">
 body{
     margin: 0;
-    background-color: #f58b34;
+    background-color: #d31114;
 }
 .wrap{
 
@@ -113,11 +113,10 @@ body{
 }
 
 .top-bg{
-    background-image: url(http://osi1i0y6i.bkt.clouddn.com/bg_top.jpg);
     background-size:100% 100%;
     background-repeat:no-repeat;
     height: 1.3rem;
-    background-color: #c05a22;
+    background-color: #a90b0d;
 }
 
 .logo{
@@ -158,12 +157,12 @@ body{
 }
 
 .t-bg{
-     background-color: #c05a22;
+     background-color: #a90b0d;
      opacity: 0.8;
 }
 
 .m-bg{
-    background-color: #a11b0e;
+    background-color: #d31114;
     padding-bottom: 3rem;
     padding-top: 0.1rem;
 }
