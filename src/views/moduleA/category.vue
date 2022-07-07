@@ -128,7 +128,7 @@ export default defineComponent({
 
     onMounted(() => {
        
-        //doCheckLogin();
+        doCheckLogin();
         getCategorys().then(res => {
             //debugger
             //suppliers.value = res.data

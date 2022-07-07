@@ -263,7 +263,7 @@ body{
     width: 100%;
     margin: 0.1rem auto 0.1rem auto;
     text-align: center;
-    height: 1.2rem;
+    height: 0.7rem;
     line-height: 0.7rem;
     font-size: 0.4rem;
     font-weight: bold;
@@ -323,7 +323,7 @@ body{
 }
 
 .vote-btn{
-    width: 70%;
+    width: 60%;
     color: black;
     letter-spacing: 5px;
     background: 0;
