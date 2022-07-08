@@ -39,7 +39,7 @@
                 投票规则
             </div>
             <div class="text-2" >
-               投票时间为2022年7月9日-16日，用户每人每天可以为自己喜欢的每个组别作品投3票，根据投票数评出“最佳人气奖”。
+               投票时间为2022年7月9日-16日，用户每人每天可以为自己喜欢的每个组别作品各投3票，根据投票数评出“最佳人气奖”。
             </div>
 
             
@@ -246,7 +246,7 @@ html,body,#app{
     width: 32%;
     position: absolute;
     left: 34%;
-    top: 15.5rem;
+    top: 16.0rem;
 }
 
 .font-2{
@@ -258,7 +258,8 @@ html,body,#app{
 
 .b-text{
   width: 100%;
-  color: #ffb422;
+  //color: #ffb422;
+  color: white;
   font-size: 0.4rem;
   text-align: center;
   margin-top: 0rem;
