@@ -117,7 +117,8 @@ export default defineComponent({
     const doCheckLogin = () =>{
        checkLogin().then(res => {
             //debugger
-            console.log(res.data)       
+            console.log(res.data)   
+            wxShare()    
         }).catch(error => {
              console.log(error)
              if (error.status == 401) {
@@ -135,7 +136,7 @@ export default defineComponent({
             categorys.value = res.data;
             console.log(res.data)
         })
-        wxShare()
+      
     })
     return {
         categorys,state,closeRule,openRule,openTitle,closeTitle
@@ -220,7 +221,8 @@ html,body,#app{
   color: #ffb422;
   font-size: 0.5rem;
   text-align: center;
-  margin-top: 2rem;
+  position: absolute;
+  bottom: 1rem;
 }
 
 .rule-bg{
