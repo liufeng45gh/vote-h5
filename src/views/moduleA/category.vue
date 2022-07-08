@@ -129,7 +129,7 @@ export default defineComponent({
 
     onMounted(() => {
        
-        doCheckLogin();
+        //doCheckLogin();
         getCategorys().then(res => {
             //debugger
             //suppliers.value = res.data
@@ -260,7 +260,9 @@ html,body,#app{
     margin-right: 0.3rem;
     margin-top: 0.3rem;
     height: 1.1rem;;
-    line-height:  1.1rem;;
+    line-height:  1.1rem;
+    position: absolute;
+    right: 0.1rem;
 }
 
 .btn-close img{
