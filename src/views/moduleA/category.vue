@@ -114,11 +114,25 @@ export default defineComponent({
        state.showTitle = true;
    }
 
+   const isIosDevice = () =>{
+    var u = navigator.userAgent;
+		//var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+		var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+		 if(isiOS){
+			return true;
+		}
+        return false;
+   }
+
     const doCheckLogin = () =>{
        checkLogin().then(res => {
             //debugger
             console.log(res.data)  
-             wxShare()     
+            const isIos = isIosDevice();
+            if (!isIos) {
+                wxShare() 
+            }
+                 
         }).catch(error => {
              console.log(error)
              if (error.status == 401) {
@@ -147,6 +161,7 @@ export default defineComponent({
 <style scoped lang="css">
 html,body,#app{
  height: 100%;
+ background-color: #d31114;
 }
 
 .c-item {
@@ -222,6 +237,7 @@ html,body,#app{
   font-size: 0.5rem;
   text-align: center;
   margin-top: 2rem;
+  background-color: #d31114;
 }
 
 .rule-bg{
