@@ -7,10 +7,10 @@
          <div class="c-title" >  
                 <img class="see-title" src="https://vote.klny.xyz/web/images/p2/b-t.png" @click="openTitle()"/>
         </div>
-        <div class="c-item" v-for="category in categorys">
-            <div class="c-img">
+        <div class="c-item" >
+            <div class="c-img" v-for=" (category ,index) in categorys">
                 <router-link :to="{path: '/appreciate/by-category', query: {categoryId: category.id }}" class="nav-link">
-                <img :src="category.image"/>
+                <img :src="category.image" :class="getCardClass(index)"/>
                 </router-link>
             </div>
         </div>
@@ -141,9 +141,16 @@ export default defineComponent({
         });
    }
 
+      const getCardClass = (index :number) => {
+        if (index % 2 ==0) {
+            return "card-left";
+        }
+        return  "card-right";;
+      };
+
     onMounted(() => {
        
-        //doCheckLogin();
+        doCheckLogin();
         getCategorys().then(res => {
             //debugger
             //suppliers.value = res.data
@@ -153,7 +160,7 @@ export default defineComponent({
        
     })
     return {
-        categorys,state,closeRule,openRule,openTitle,closeTitle
+        categorys,state,closeRule,openRule,openTitle,closeTitle,getCardClass
     };
   }
 });
@@ -165,10 +172,17 @@ html,body,#app{
 }
 
 .c-item {
-    width: 68%;
+    width: 80%;
     margin: 0 auto;
-    margin-top: 0.3rem;
+    margin-top: 1.8rem;
     margin-bottom: 0.3rem;
+    text-align: center;
+}
+
+.c-img  {
+    width: 50%;
+    float: left;
+    margin-left: 0%;
 }
 .w-max {
     width: 100%;
@@ -191,17 +205,8 @@ html,body,#app{
     background-repeat:no-repeat;
 }
 
-.c-title{
-    width: 100%;
-    text-align: center;
-}
 
-.see-title{
-    width: 60%;
-    position: absolute;
-    left: 20%;
-    top: 10.9rem;
-}
+
 
 .c-culture{
     width: 100%;
@@ -209,7 +214,28 @@ html,body,#app{
     margin-top: 0.3rem;
 }
 .c-img img {
+   
+}
+
+.c-title{
     width: 100%;
+    text-align: center;
+}
+.see-title{
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    top: 11.8rem;
+}
+
+.card-left{
+    width: 95%;
+    //margin-left: 10%;
+}
+
+.card-right{
+    width: 95%;
+    //margin-left: 10%;
 }
 
 .c-culture img {
@@ -220,7 +246,7 @@ html,body,#app{
     width: 32%;
     position: absolute;
     left: 34%;
-    top: 16.5rem;
+    top: 15.5rem;
 }
 
 .font-2{
@@ -299,7 +325,7 @@ html,body,#app{
     color: black;
     font-size: 0.4rem;
     margin-top: 0.4rem;
-    text-align: left;
+    text-align: justify;
     padding: 0 1rem 0 1rem;
     line-height: none;
 }
