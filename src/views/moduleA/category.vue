@@ -165,14 +165,13 @@ html,body,#app{
 }
 
 .c-item {
-    width: 70%;
+    width: 68%;
     margin: 0 auto;
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
     margin-bottom: 0.3rem;
 }
 .w-max {
     width: 100%;
-    height: 100%;
     padding-top: 3rem;
     margin: 0;
     background-image: url(https://vote.klny.xyz/web/images/p2/bg-2.jpg);
@@ -183,9 +182,9 @@ html,body,#app{
 
 .w-box {
     width: 100%;
-    height: 4.7rem;
+    height: 5.7rem;
     margin-top: 8rem;
-    padding-top: 2rem;
+    padding-top: 1.2rem;
   
     background-image: url(https://vote.klny.xyz/web/images/p2/b-1.png);
     background-size: 100%;
@@ -221,7 +220,7 @@ html,body,#app{
     width: 32%;
     position: absolute;
     left: 34%;
-    top: 17.9rem;
+    top: 16.5rem;
 }
 
 .font-2{
@@ -234,9 +233,9 @@ html,body,#app{
 .b-text{
   width: 100%;
   color: #ffb422;
-  font-size: 0.5rem;
+  font-size: 0.4rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 0rem;
   background-color: #d31114;
 }
 

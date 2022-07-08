@@ -267,6 +267,7 @@ body{
     line-height: 0.7rem;
     font-size: 0.4rem;
     font-weight: bold;
+    color: #333;
 }
 
 .card-img{
@@ -298,6 +299,7 @@ body{
     text-align: left;
     font-size: 0.4rem;
     font-weight: bold;
+    color: #333;
 }
 
 .s-right{
